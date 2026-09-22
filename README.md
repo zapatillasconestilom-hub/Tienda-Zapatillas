@@ -1,1 +1,376 @@
-<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>ZE | Zapatillas con Estilo</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { font-family: Arial, Helvetica, sans-serif; background: #f6f6f6; color: #111; } /* ========================= ENCABEZADO ========================= */ header { position: sticky; top: 0; z-index: 1000; background: #000; color: white; padding: 18px 7%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 3px 15px rgba(0,0,0,0.15); } .logo { display: flex; flex-direction: column; line-height: 1; } .logo-principal { font-size: 34px; font-weight: 900; letter-spacing: 5px; } .logo-subtitulo { font-size: 10px; letter-spacing: 3px; margin-top: 5px; color: #ccc; } nav { display: flex; gap: 25px; } nav a { color: white; text-decoration: none; font-size: 14px; font-weight: bold; transition: 0.3s; } nav a:hover { color: #aaa; } /* ========================= PORTADA ========================= */ .hero { min-height: 620px; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("WhatsApp Image 2026-09-19 at 11.14.39 AM.jpeg") center/cover no-repeat; color: white; padding: 40px 20px; } .hero-contenido { max-width: 850px; } .hero-pequeno { letter-spacing: 5px; font-size: 14px; margin-bottom: 20px; } .hero h1 { font-size: clamp(55px, 10vw, 110px); letter-spacing: 10px; margin-bottom: 15px; font-weight: 900; } .hero h2 { font-size: clamp(25px, 4vw, 45px); margin-bottom: 20px; } .hero p { font-size: 18px; color: #eee; margin-bottom: 35px; } .boton { display: inline-block; background: white; color: black; padding: 15px 32px; border-radius: 40px; text-decoration: none; font-weight: bold; transition: 0.3s; } .boton:hover { transform: scale(1.05); background: #ddd; } /* ========================= SECCIONES ========================= */ section { padding: 80px 7%; } .titulo { text-align: center; font-size: 38px; margin-bottom: 12px; } .subtitulo { text-align: center; color: #666; margin-bottom: 50px; font-size: 16px; } /* ========================= PRODUCTOS ========================= */ .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; max-width: 1250px; margin: auto; } .producto { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.08); transition: 0.3s; position: relative; } .producto:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.14); } .producto-imagen { position: relative; overflow: hidden; background: #eee; } .producto-imagen img { width: 100%; height: 300px; object-fit: cover; display: block; transition: 0.5s; } .producto:hover img { transform: scale(1.06); } .etiqueta { position: absolute; top: 15px; left: 15px; background: #000; color: white; padding: 7px 13px; border-radius: 20px; font-size: 11px; font-weight: bold; letter-spacing: 1px; } .producto-info { padding: 22px; } .producto-info h3 { font-size: 21px; margin-bottom: 8px; } .producto-info p { color: #777; font-size: 14px; margin-bottom: 15px; } .precio { font-size: 22px; font-weight: 900; margin-bottom: 18px; } .boton-comprar { display: block; width: 100%; text-align: center; background: #000; color: white; padding: 12px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; } .boton-comprar:hover { background: #333; } /* ========================= NUEVA COLECCIÓN ========================= */ .coleccion { background: #000; color: white; } .coleccion .subtitulo { color: #aaa; } .coleccion-contenido { max-width: 1100px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; } .coleccion-imagen img { width: 100%; height: 450px; object-fit: cover; border-radius: 25px; } .coleccion-texto h3 { font-size: 45px; margin-bottom: 20px; } .coleccion-texto p { color: #ccc; line-height: 1.8; margin-bottom: 25px; } /* ========================= POR QUÉ ZE ========================= */ .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; max-width: 1100px; margin: auto; } .beneficio { background: white; padding: 30px 20px; border-radius: 18px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.06); } .beneficio-icono { font-size: 38px; margin-bottom: 15px; } .beneficio h3 { margin-bottom: 10px; } .beneficio p { color: #666; font-size: 14px; line-height: 1.5; } /* ========================= OPINIONES ========================= */ .opiniones { background: #eaeaea; } .comentarios { max-width: 900px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; } .comentario { background: white; padding: 30px; border-radius: 18px; } .estrellas { margin-bottom: 15px; font-size: 18px; } .comentario p { color: #555; line-height: 1.6; margin-bottom: 15px; } .cliente { font-weight: bold; } /* ========================= CONTACTO ========================= */ .contacto { text-align: center; background: white; } .contacto-contenido { max-width: 750px; margin: auto; } .contacto p { color: #666; margin-bottom: 12px; } .correo { font-size: 20px; font-weight: bold; margin: 25px 0; } .correo a { color: #111; text-decoration: none; } /* ========================= PIE DE PÁGINA ========================= */ footer { background: #000; color: white; text-align: center; padding: 40px 20px; } footer .footer-logo { font-size: 35px; font-weight: 900; letter-spacing: 5px; margin-bottom: 10px; } footer p { color: #aaa; margin: 7px; } /* ========================= CELULAR ========================= */ @media (max-width: 700px) { header { flex-direction: column; gap: 15px; padding: 18px; } nav { gap: 12px; flex-wrap: wrap; justify-content: center; } nav a { font-size: 12px; } .hero { min-height: 550px; } .hero h1 { letter-spacing: 5px; } section { padding: 60px 5%; } .coleccion-contenido { grid-template-columns: 1fr; } .coleccion-imagen img { height: 350px; } } </style> </head> <body> <!-- ========================= ENCABEZADO ========================= --> <header> <div class="logo"> <div class="logo-principal">ZE</div> <div class="logo-subtitulo">ZAPATILLAS CON ESTILO</div> </div> <nav> <a href="#inicio">Inicio</a> <a href="#productos">Colección</a> <a href="#nosotros">Nosotros</a> <a href="#opiniones">Opiniones</a> <a href="#contacto">Contacto</a> </nav> </header> <!-- ========================= PORTADA ========================= --> <section class="hero" id="inicio"> <div class="hero-contenido"> <div class="hero-pequeno"> ZAPATILLAS CON ESTILO </div> <h1>ZE</h1> <h2>Tu estilo comienza aquí.</h2> <p> Descubre nuestra colección de zapatillas, seleccionadas para darle personalidad a cada paso. </p> <a href="#productos" class="boton"> VER COLECCIÓN </a> </div> </section> <!-- ========================= PRODUCTOS ========================= --> <section id="productos"> <h2 class="titulo"> Nuestra colección </h2> <p class="subtitulo"> Modelos disponibles de ZE — Zapatillas con Estilo </p> <div class="productos"> <!-- PRODUCTO 1 --> <div class="producto"> <div class="producto-imagen"> <span class="etiqueta"> NUEVO </span> <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900" alt="Zapatillas ZE modelo Urban"> </div> <div class="producto-info"> <h3>Urban ZE</h3> <p> Diseño urbano para tu día a día. </p> <div class="precio"> $149.900 </div> <a class="boton-comprar" href="mailto:zapatillasconestilom@gmail.com?subject=Consulta%20Urban%20ZE"> CONSULTAR </a> </div> </div> <!-- PRODUCTO 2 --> <div class="producto"> <div class="producto-imagen"> <span class="etiqueta"> DESTACADO </span> <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=900" alt="Zapatillas ZE blancas"> </div> <div class="producto-info"> <h3>White ZE</h3> <p> Un diseño limpio y versátil. </p> <div class="precio"> $169.900 </div> <a class="boton-comprar" href="mailto:zapatillasconestilom@gmail.com?subject=Consulta%20White%20ZE"> CONSULTAR </a> </div> </div> <!-- PRODUCTO 3 --> <div class="producto"> <div class="producto-imagen"> <span class="etiqueta"> NUEVO </span> <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=900" alt="Zapatillas ZE deportivas"> </div> <div class="producto-info"> <h3>Sport ZE</h3> <p> Estilo deportivo para cualquier ocasión. </p> <div class="precio"> $189.900 </div> <a class="boton-comprar" href="mailto:zapatillasconestilom@gmail.com?subject=Consulta%20Sport%20ZE"> CONSULTAR </a> </div> </div> <!-- PRODUCTO 4 --> <div class="producto"> <div class="producto-imagen"> <span class="etiqueta"> TENDENCIA </span> <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=900" alt="Zapatillas ZE negras"> </div> <div class="producto-info"> <h3>Black ZE</h3> <p> Un modelo sobrio y moderno. </p> <div class="precio"> $179.900 </div> <a class="boton-comprar" href="mailto:zapatillasconestilom@gmail.com?subject=Consulta%20Black%20ZE"> CONSULTAR </a> </div> </div> </div> </section> <!-- ========================= NUEVA COLECCIÓN ========================= --> <section class="coleccion" id="nosotros"> <div class="coleccion-contenido"> <div class="coleccion-imagen"> <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=1000" alt="Colección ZE"> </div> <div class="coleccion-texto"> <h3>ZE</h3> <p> Zapatillas con Estilo nace para quienes buscan modelos que combinen personalidad, comodidad y una imagen moderna. </p> <p> Explora nuestros nuevos modelos y encuentra el par que representa tu estilo. </p> <a href="#productos" class="boton"> VER MODELOS </a> </div> </div> </section> <!-- ========================= BENEFICIOS ========================= --> <section> <h2 class="titulo"> ¿Por qué elegir ZE? </h2> <p class="subtitulo"> Zapatillas con Estilo </p> <div class="beneficios"> <div class="beneficio"> <div class="beneficio-icono"> 👟 </div> <h3>Estilo</h3> <p> Modelos seleccionados para complementar diferentes estilos. </p> </div> <div class="beneficio"> <div class="beneficio-icono"> ✨ </div> <h3>Novedades</h3> <p> Incorporamos nuevos modelos y diseños a nuestra colección. </p> </div> <div class="beneficio"> <div class="beneficio-icono"> 💬 </div> <h3>Atención</h3> <p> Puedes escribirnos para consultar tallas, colores y disponibilidad. </p> </div> <div class="beneficio"> <div class="beneficio-icono"> ❤️ </div> <h3>Tu estilo</h3> <p> Queremos que encuentres un modelo que vaya contigo. </p> </div> </div> </section> <!-- ========================= OPINIONES ========================= --> <section class="opiniones" id="opiniones"> <h2 class="titulo"> Opiniones </h2> <p class="subtitulo"> Lo que nuestros clientes dicen de ZE </p> <div class="comentarios"> <div class="comentario"> <div class="estrellas"> ⭐⭐⭐⭐⭐ </div> <p> "Me encantó el diseño y la atención. Las zapatillas están muy bonitas." </p> <div class="cliente"> Cliente ZE </div> </div> <div class="comentario"> <div class="estrellas"> ⭐⭐⭐⭐⭐ </div> <p> "Encontré un modelo que combina perfectamente con mi estilo." </p> <div class="cliente"> Cliente ZE </div> </div> <div class="comentario"> <div class="estrellas"> ⭐⭐⭐⭐⭐ </div> <p> "Muy buena atención y diferentes modelos para escoger." </p> <div class="cliente"> Cliente ZE </div> </div> </div> </section> <!-- ========================= CONTACTO ========================= --> <section class="contacto" id="contacto"> <div class="contacto-contenido"> <h2 class="titulo"> Hablemos </h2> <p> ¿Te interesa algún modelo? </p> <p> Escríbenos para consultar tallas, colores, disponibilidad y precios. </p> <div class="correo"> 📧 <a href="mailto:zapatillasconestilom@gmail.com"> zapatillasconestilom@gmail.com </a> </div> <a class="boton" href="mailto:zapatillasconestilom@gmail.com?subject=Consulta%20sobre%20zapatillas"> ESCRIBIRNOS </a> </div> </section> <!-- ========================= PIE DE PÁGINA ========================= --> <footer> <div class="footer-logo"> ZE </div> <p> Zapatillas con Estilo </p> <p> zapatillasconestilom@gmail.com </p> <p> © 2026 ZE. Todos los derechos reservados. </p> </footer> </body> </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ZAPPI | Tienda de Zapatillas</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #111;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .principal {
+      min-height: 420px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .principal h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .principal p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .boton {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 8%;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 32px;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .producto img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .producto h3 {
+      margin: 15px 0 8px;
+    }
+
+    .precio {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .comprar {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+    }
+
+    .comentarios {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .comentarios p {
+      margin: 15px 0;
+      color: #555;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .principal h1 {
+        font-size: 36px;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="logo">ZAPPI</div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Zapatillas</a>
+      <a href="#comentarios">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+
+  <!-- INICIO -->
+  <section class="principal" id="inicio">
+    <div>
+      <h1>NUEVA COLECCIÓN</h1>
+
+      <p>
+        Zapatillas modernas para todos tus estilos.
+      </p>
+
+      <a href="#productos" class="boton">
+        VER ZAPATILLAS
+      </a>
+    </div>
+  </section>
+
+
+  <!-- PRODUCTOS -->
+  <section id="productos">
+
+    <h2 class="titulo">
+      Zapatillas destacadas
+    </h2>
+
+    <div class="productos">
+
+      <!-- PRODUCTO 1 -->
+      <div class="producto">
+
+        <img
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800"
+          alt="Zapatillas deportivas"
+        >
+
+        <h3>Urban Classic</h3>
+
+        <div class="precio">
+          $149.900
+        </div>
+
+        <a
+          class="comprar"
+          href="https://wa.me/573000000000"
+          target="_blank"
+        >
+          Comprar
+        </a>
+
+      </div>
+
+
+      <!-- PRODUCTO 2 -->
+      <div class="producto">
+
+        <img
+          src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800"
+          alt="Zapatillas blancas"
+        >
+
+        <h3>Street White</h3>
+
+        <div class="precio">
+          $169.900
+        </div>
+
+        <a
+          class="comprar"
+          href="https://wa.me/573000000000"
+          target="_blank"
+        >
+          Comprar
+        </a>
+
+      </div>
+
+
+      <!-- PRODUCTO 3 -->
+      <div class="producto">
+
+        <img
+          src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=800"
+          alt="Zapatillas deportivas"
+        >
+
+        <h3>Sport Max</h3>
+
+        <div class="precio">
+          $189.900
+        </div>
+
+        <a
+          class="comprar"
+          href="https://wa.me/573000000000"
+          target="_blank"
+        >
+          Comprar
+        </a>
+
+      </div>
+
+
+      <!-- PRODUCTO 4 -->
+      <div class="producto">
+
+        <img
+          src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800"
+          alt="Zapatillas modernas"
+        >
+
+        <h3>Trend Black</h3>
+
+        <div class="precio">
+          $179.900
+        </div>
+
+        <a
+          class="comprar"
+          href="https://wa.me/573000000000"
+          target="_blank"
+        >
+          Comprar
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- OPINIONES -->
+  <section id="comentarios">
+
+    <h2 class="titulo">
+      Lo que dicen nuestros clientes
+    </h2>
+
+    <div class="comentarios">
+
+      <p>⭐⭐⭐⭐⭐</p>
+
+      <p>
+        "Me encantaron mis zapatillas. Muy bonitas y cómodas."
+      </p>
+
+      <p>
+        — Cliente ZAPPI
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+
+    <h2 class="titulo">
+      ¿Quieres comprar?
+    </h2>
+
+    <div style="text-align:center;">
+
+      <p style="margin-bottom:20px;">
+        Escríbenos por WhatsApp para consultar tallas,
+        colores y disponibilidad.
+      </p>
+
+      <a
+        class="boton"
+        href="https://wa.me/573000000000"
+        target="_blank"
+      >
+        ESCRIBIR POR WHATSAPP
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+
+    <p>
+      © 2026 ZAPPI - Tienda de Zapatillas
+    </p>
+
+    <p style="margin-top:10px;">
+      Síguenos en nuestras redes sociales
+    </p>
+
+  </footer>
+
+</body>
+</html>
+🟢 PASO 7: Guardar
+
+Después de pegar todo el código:
+
+Baja hasta el final de la página.
